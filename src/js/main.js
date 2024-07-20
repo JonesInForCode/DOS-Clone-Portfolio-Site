@@ -41,7 +41,7 @@ function executeCommand(cmd) {
         result = commands[trimmedCmd]();
     }
     currentDisplay += input + '<br>' + result + '<br>> ';
-    terminal.innerHTML = currentDisplay + 'span id="input"></span><span id="cursor">█</span>';
+    terminal.innerHTML = currentDisplay + '<span id="input"></span><span id="cursor">█</span>';
 }
 
 function blinkCursor() {
