@@ -12,6 +12,7 @@ const commands = {
             - skills: List my skills. <br>
             - github: Visit my GitHub profile. <br>
             - blueprint: discusses how this site was built. <br>
+            - repo: Discusses the source code of this website. <br>
             - gui: Opens my GUI portfolio. <br>
             - hack: Hack this website. <br>
 
@@ -65,6 +66,11 @@ const commands = {
             - CSS: For styling the content. Very minimal. <br>
             - JavaScript: The meat of this project. Everything is manipulating the DOM as you go. <br>
             `;
+    },
+    repo: function() {
+        window.open('https://github.com/yourusername/gui-portfolio', '_blank');
+        return 'Opening site repo in a new tab. <br>';
+            ;
     },
     github: function() {
         return `
