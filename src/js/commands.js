@@ -11,7 +11,9 @@ const commands = {
             - contact: Contact Me. <br>
             - skills: List my skills. <br>
             - github: Visit my GitHub profile. <br>
+            - blueprint: discusses how this site was built. <br>
             - gui: Opens my GUI portfolio. <br>
+            - hack: Hack this website. <br>
 
         Type a command and press "ENTER" to execute it. <br>
             `;
@@ -55,6 +57,15 @@ const commands = {
             - Git <br>
             `;
     },
+    blueprint: function() {
+        return `
+        This website was built using HTML, CSS, and JavaScript. <br>
+        I used the following tools and frameworks: <br>
+            - HTML: Mostly to be manipulated by JS in realtime. <br>
+            - CSS: For styling the content. Very minimal. <br>
+            - JavaScript: The meat of this project. Everything is manipulating the DOM as you go. <br>
+            `;
+    },
     github: function() {
         return `
         You can find my code on my GitHub profile: <br>
@@ -65,6 +76,9 @@ const commands = {
     gui: function() {
         window.open('https://github.com/yourusername/gui-portfolio', '_blank');
         return 'Opening GUI portfolio in a new tab. <br>';
+    },
+    hack: function() {
+        return 'This website is a showcase for my skills and knowledge. I am not designed to be hacked. <br>';
     }
 
     // Add more commands here
