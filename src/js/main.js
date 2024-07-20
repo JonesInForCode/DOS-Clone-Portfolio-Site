@@ -39,6 +39,11 @@ function executeCommand(cmd) {
     let result = `Unknown command: ${trimmedCmd}`;
     if (trimmedCmd in commands) {
         result = commands[trimmedCmd]();
+        if (trimmedCmd === 'clear') {
+            currentDisplay = '> ';
+            terminal.innerHTML = currentDisplay + '<span id="input"></span><span id="cursor">█</span>';
+            return;
+        }
     }
     currentDisplay += input + '<br>' + result + '<br>> ';
     terminal.innerHTML = currentDisplay + '<span id="input"></span><span id="cursor">█</span>';
