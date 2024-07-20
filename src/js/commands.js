@@ -13,19 +13,19 @@ const commands = {
             - github: Visit my GitHub profile. <br>
             - gui: Opens my GUI portfolio. <br>
 
-        Type a command and press "ENTER" to execute it. 
+        Type a command and press "ENTER" to execute it. <br>
             `;
     },
     clear: function() {
         terminal.innerHTML = '';
-        return 'Terminal cleared.';
+        return 'Terminal cleared. <br>';
     },
     about: function() {
         return `
         Hi there! I'm a Command Line Interface (CLI) terminal. <br>
         I was created to demonstrate the basics of web development. <br>
         My purpose is to provide you with information and guidance on various topics. <br>
-        Feel free to explore my commands and learn more about me.
+        Feel free to explore my commands and learn more about me. <br>
             `;
     },
     projects: function() {
@@ -59,12 +59,12 @@ const commands = {
         return `
         You can find my code on my GitHub profile: <br>
         https://github.com/yourusername <br>
-        Feel free to explore my repositories and contribute to them!
+        Feel free to explore my repositories and contribute to them! <br>
             `;
     },
     gui: function() {
         window.open('https://github.com/yourusername/gui-portfolio', '_blank');
-        return 'Opening GUI portfolio in a new tab.';
+        return 'Opening GUI portfolio in a new tab. <br>';
     }
 
     // Add more commands here
