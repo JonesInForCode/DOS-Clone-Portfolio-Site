@@ -44,9 +44,45 @@ function executeCommand(cmd) {
             terminal.innerHTML = currentDisplay + '<span id="input"></span><span id="cursor">█</span>';
             return;
         }
+        if (trimmedCmd === 'hack') {
+            startHackAnimation();
+            return;
+        }
     }
     currentDisplay += input + '<br>' + result + '<br>> ';
     terminal.innerHTML = currentDisplay + '<span id="input"></span><span id="cursor">█</span>';
+}
+
+function startHackAnimation() {
+    terminal.innerHTML = '';
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123'
+    const lines = 20;
+    const columns = 40;
+
+    function getRandomChar() {
+        return chars[Math.floor(Math.random() * chars.length)];
+    }
+
+    function createMatrixLine() {
+        let line = '';
+        for (let i = 0; i < columns; i++) {
+            line += getRandomChar();
+        }
+        return line;
+    }
+
+    function updateMatrix() {
+        terminal.innerHTML = '';
+        for (let i = 0; i < lines; i++) {
+            terminal.innerHTML += createMatrixLine() + '<br>';
+        }
+    }
+    const intervalId = setInterval(updateMatrix, 100);
+
+    setTimeout(() => {
+        clearInterval(intervalId);
+        location.reload();
+    }, 6000)
 }
 
 function blinkCursor() {
